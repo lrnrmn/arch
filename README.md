@@ -97,15 +97,16 @@ sudo systemctl enable nvidia-resume.service
 ```
 Reboot to apply changes.
 # Force-Enable Wayland
-To force-enable Wayland, override these rules by creating the following symlink:
+To force-enable Wayland, override the GDM chipset-dependent ```udev``` rules by creating the following symlink:
 ```bash
 sudo ln -s /dev/null /etc/udev/rules.d/61-gdm.rules
 ```
-Set this environment variable:
+---
+Edit environment variables:
 ```bash
 sudo nano /etc/environment
 ```
-Add this to the end of the file:
+Paste this line to the end of the file:
 ```bash
 MUTTER_DEBUG_KMS_THREAD_TYPE=user
 ```
