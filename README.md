@@ -25,7 +25,7 @@ Reboot to apply the new config.
 sudo cat /sys/module/nvidia_drm/parameters/modeset
 ```
 make sure it returns ```Y```.
-## Early loading
+## Early loading of nvidia modules
 Add the ```nvidia``` modules to ```mkinitcpio``` config:
 ```bash
 sudo nano /etc/mkinitcpio.conf
@@ -110,7 +110,7 @@ Paste this line to the end of the file:
 ```bash
 MUTTER_DEBUG_KMS_THREAD_TYPE=user
 ```
-# Failure on logout
+# Fix failure on logout
 Edit the GDM config:
 ```bash
 sudo nano /etc/gdm/custom.conf
