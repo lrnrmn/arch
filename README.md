@@ -119,3 +119,53 @@ Add ```GdmXserverTimeout=60``` to the end of the ```[daemon]``` section.
 
 
 Reboot to apply changes.
+
+# Further Setup
+
+* To remove all unnesissary apps, run this command:
+`sudo pacman -Rsn epiphany gnome-music gnome-connections gnome-tour totem`
+
+* To remove all unnesissary shortcuts, run these commands:
+`cd /usr/share/applications`
+`sudo rm avahi-discover.desktop bssh.desktop bvnc.desktop qv4l2.desktop qvidcap.desktop`
+
+* Install `yay` AUR helper:
+`sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si`
+    * Or alternativly, ```paru``` AUR helper:
+```bash
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+```
+
+* Install the `alsa-utils` package:
+`sudo pacman -S alsa-utils`
+
+    * Run `alsamixer`
+    * Press `F6` and select `HDA Intel PCI`
+With the right arrow, move right until `Item` in the top left shows`Auto-Mute Mode`
+Disable it by pressing the down arrow
+Press `Esc`
+
+* To show video thumbnails:
+`sudo pacman -S ffmpegthumbnailer`
+
+* To enable bluetooth, run `systemctl enable bluetooth` and enter the password
+
+* For a more unified desktop, install the `MoreWaita` icon pack and the `adw-gtk3` theme.
+    * Also, you need `gnome-tweaks` to apply these.
+`sudo pacman -S gnome-tweaks`
+
+* Install Fonts:
+`sudo pacman -S noto-fonts`
+
+* To install spotify, install the `spotify-launcher` package:
+`sudo pacman -S spotify-launcher`
+    * Launch it once (you don't have to login), and then patch it with [Spotx-Bash](https://github.com/SpotX-Official/SpotX-Bash):
+```bash
+bash <(curl -sSL https://spotx-official.github.io/run.sh) -h
+```
+
+* To use Jetbrains Rider, install these dependencies:
+`sudo pacman -S mono mono-msbuild`
