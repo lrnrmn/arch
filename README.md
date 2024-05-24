@@ -131,7 +131,7 @@ Reboot to apply changes.
 
 * Install `yay` AUR helper:
 `sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si`
-    * Or alternativly, ```paru``` AUR helper:
+    * Alternativly, ```paru``` AUR helper:
 ```bash
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
