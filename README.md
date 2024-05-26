@@ -1,7 +1,7 @@
 # Arch Linux Guide
 ## Initial packages install
 ```bash
-sudo pacman -S firefox chromium nano git zip nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
+sudo pacman -S firefox nano git zip nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
 ```
 Reboot to complete the driver package installation.
 ## DRM kernel mode setting
