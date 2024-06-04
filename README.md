@@ -118,8 +118,10 @@ Edit the GDM config:
 ```bash
 sudo nano /etc/gdm/custom.conf
 ```
-Add ```GdmXserverTimeout=60``` to the end of the ```[daemon]``` section.
-
+Add this line to the end of the ```[daemon]``` section:
+```bash
+GdmXserverTimeout=60
+```
 
 Reboot to apply changes.
 
