@@ -164,7 +164,10 @@ Press `Esc`
 `sudo pacman -S gnome-tweaks`
 
 * Install Fonts:
-`sudo pacman -S noto-fonts`
+`sudo pacman -S $(pacman -Ssq noto-fonts)`
+
+* To install Gnome extentions, you need the `gnome-browser-connector` package:
+`gnome-browser-connector`
 
 * To install spotify, install the `spotify-launcher` package:
 `sudo pacman -S spotify-launcher`
