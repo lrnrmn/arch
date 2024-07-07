@@ -178,3 +178,6 @@ bash <(curl -sSL https://spotx-official.github.io/run.sh) -h
 
 * To use Jetbrains Rider, install these dependencies:
 `sudo pacman -S mono mono-msbuild`
+
+* To make Plex and Plex HTPC work under Wayland, add this environment variable with flatseal:
+  `QT_XCB_GL_INTEGRATION=xcb_egl`
