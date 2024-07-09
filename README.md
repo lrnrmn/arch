@@ -181,3 +181,7 @@ bash <(curl -sSL https://spotx-official.github.io/run.sh) -h
 
 * To make Plex and Plex HTPC work under Wayland, add this environment variable with flatseal:
   `QT_XCB_GL_INTEGRATION=xcb_egl`
+* For Virtual-Machine-Manager install all of these packages:
+```bash
+sudo pacman -S virt-manager qemu vde2 ebtables iptables-nft nftables dnsmasq bridge-utils ovmf
+```
