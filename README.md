@@ -1,7 +1,7 @@
 # Arch Linux Guide
 ## Installing Arch
 Install arch with `archinstall`.
-Install sddm and run `systemctl enable sddm`.
+Install sddm and run `systemctl enable sddm`
 ## Initial packages install
 ```bash
 sudo pacman -S firefox nano git zip nvidia nvidia-utils lib32-nvidia-utils nvidia-settings
@@ -125,7 +125,7 @@ GdmXserverTimeout=60
 
 Reboot to apply changes.
 
-Dont forget to `systemctl disable sddm` and then `systemctl enable gdm`.
+Dont forget to `systemctl disable sddm` and then `systemctl enable gdm`
 # Further Setup
 
 * To remove all unnesissary apps, run this command:
