@@ -181,8 +181,18 @@ bash <(curl -sSL https://spotx-official.github.io/run.sh) -h
 
 * To make Plex and Plex HTPC work under Wayland, add this environment variable with flatseal:
   `QT_XCB_GL_INTEGRATION=xcb_egl`
+## Virtual Machines
 * For Virtual-Machine-Manager install all of these packages:
     * When prompted, pick `qemu-full`, and accept replacing conflicted packages.
 ```bash
 sudo pacman -S virt-manager qemu vde2 ebtables iptables-nft nftables dnsmasq bridge-utils ovmf
 ```
+* Next, add yourself to the libvirt user group: `sudo usermod -a -G kvm,libvirt $(whoami)`
+
+* Enable the service: `sudo systemctl enable libvirtd`
+
+* Start it: `sudo systemctl start libvirtd`
+
+* Set the virtul machine default network to autostart: `sudo virsh net-autostart default`
+
+* Start it now: `sudo virsh net-start default`
